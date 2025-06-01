@@ -57,15 +57,15 @@ endpoints for each app, with examples of usage.
 * PUT /api/tasks/<id>/ - edit task
 * DELETE /api/tasks/<id>/ - delete task
 ### filters:
-* /api/tasks/?status=do_zrobienia
-* /api/tasks/?priorytet=wysoki
+* /api/tasks/?status=todo
+* /api/tasks/?priority=high
 * /api/tasks/?ordering=created_at
 * /api/tasks/?ordering=-created_at
 ### example request:
 * Header: POST /api/tasks/
 * JSON: {
-  "tytul": "Zrobić zakupy",
-  "opis": "Kupić mleko i jajka",
-  "status": "do_zrobienia",
-  "priorytet": "wysoki"
+  "title": "Zrobić zakupy",
+  "description": "Kupić mleko i jajka",
+  "status": "todo",
+  "priority": "high"
 }
