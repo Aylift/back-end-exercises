@@ -49,7 +49,7 @@ You can now run the development server:
 After starting server, the easiest way to test endpoints is by using Postman. Below are all available
 endpoints for each app, with examples of usage.
 
-## todo:
+## todo
 ### endpoints:
 * GET /api/tasks/ - list of tasks
 * POST /api/tasks/ - adding a task
@@ -63,9 +63,21 @@ endpoints for each app, with examples of usage.
 * /api/tasks/?ordering=-created_at
 ### example request:
 * Header: POST /api/tasks/
-* JSON: {
+* Body: {
   "title": "Zrobić zakupy",
   "description": "Kupić mleko i jajka",
   "status": "todo",
   "priority": "high"
+}
+## jwt_register
+### endpoints:
+* POST /api/register/ - user register
+* POST /api/login/ - loggin in (get JWT token)
+* POST /api/token/refresh/ - token refresh 
+* GET /api/protected/ - access to protected path
+### example request:
+* Header: POST /api/register/
+* Body: {
+"username": "testuser",
+"password": "secret123"
 }
