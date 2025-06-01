@@ -99,3 +99,14 @@ endpoints for each app, with examples of usage.
 "is_available": true
 }
 * Header: GET /api/books/?search=Rowling
+## url_shortener
+### endpoints:
+* POST /api/shorten / - create short url
+* GET /<short_code>/ - redirect to shortened url
+### example requests:
+* Header: POST /api/shorten/
+* Body:
+{
+  "original_url": "https://www.facebook.com"
+}
+* Header: GET /fey7uC/
