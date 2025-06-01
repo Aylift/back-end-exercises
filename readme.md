@@ -81,3 +81,21 @@ endpoints for each app, with examples of usage.
 "username": "testuser",
 "password": "secret123"
 }
+## books
+### endpoints:
+* GET /api/books/ - list all books
+* POST /api/books/ - create book
+* GET /api/books/{id}/ - get book by id
+* PUT /api/books/{id}/ - edit book
+* PATCH /api/books/{id}/ - partially edit book
+* DELETE /api/books/{id}/ - delete book
+* GET /api/books/?search=keyword – search for book by title or author
+* GET /api/books/{id}/availability/ - check if book is available
+### example request:
+* Header: POST /api/books/
+* Body: {
+"title": "Harry Potter",
+"author": "J. K. Rowling",
+"is_available": true
+}
+* Header: GET /api/books/?search=Rowling
